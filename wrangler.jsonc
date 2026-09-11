@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pavluyo",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "." },
+  "durable_objects": {
+    "bindings": [
+      { "name": "PRESENCE", "class_name": "Presence" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["Presence"] }
+  ]
+}
